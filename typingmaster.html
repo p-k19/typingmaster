@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title> Typing Master </title>
+
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+
+
+        .heading {
+            padding: 20px;
+            font-size: 18px;
+            height: 90px;
+            font-family: 'Sofia';
+            text-align: center;
+            width: 100%;
+            background: rgb(33, 33, 75);
+            color: white;
+        }
+
+        .heading2 {
+            padding: 15px;
+            width: 100%;
+           
+            font-size: 12px;
+            height: 70px;
+            text-align: center;
+            background: rgb(84, 202, 202);
+            color: white;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+        }
+
+
+        .button {
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        .quote {
+            background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #bcc9a0);
+            padding: 1rem;
+            left: 50%;
+            border-radius: 1rem;
+            width: 800px;
+            height: auto;
+
+        }
+
+        .restart {
+            background-color: skyblue;
+            font-size: 1.5rem;
+            padding: 10px;
+            width: 100px;
+            border: 0px;
+            text-align: center;
+            position: relative;
+            color: whitesmoke;
+            border-radius: 10px 10px 10px 10px;
+
+            font-weight: bold;
+            box-shadow: rgb(170, 168, 168) 5px 8px 5px;
+        }
+
+        .timer {
+            background-color: skyblue;
+            font-size: 1.5rem;
+            padding: 10px;
+            border: 0px;
+            text-align: center;
+            position: relative;
+            color: rgb(27, 26, 26);
+            border-radius: 10px 10px 10px 10px;
+            width: 20%;
+            font-weight: bold;
+            box-shadow: rgb(170, 168, 168) 5px 8px 5px;
+        }
+
+        .timer,
+        .accuracy {
+            background-color: white;
+            height: 60px;
+            width: 110px;
+            margin: 8px;
+            text-align: center;
+            margin-left: 50px;
+            padding: 10px;
+            border-radius: 20%;
+            box-shadow: grey 5px 8px 5px;
+        }
+
+
+
+        .quotehead
+        {
+            position:relative; text-align: center; margin-top: 10px; padding: 15px;  border: 0px;
+    
+    border-radius: 10px 10px 10px 10px; background-color: rgb(185, 185, 43);
+        }
+
+
+        .incorrect_char {
+color: red;
+text-decoration: underline;
+}
+.correct_char { 
+    color: darkgreen; 
+    } 
+
+        .input_box {
+            background-color: white;
+            font-weight: bold;
+            height: 8rem;
+            width: 40%;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 10px;
+            padding: 15px;
+            border: 0px;
+            box-shadow: grey 5px 8px 5px;
+            border-radius: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heading">
+        <p> Welcome In Typing Speed Game </p>
+
+
+    </div>
+
+
+    <div class="heading2">
+
+        <p> This is a typing test. Your goal is to duplicate the provided test,EXACTLY,
+            in the field below.The
+            timer
+            starts when you start typing,and only stops
+            when you match this text exactly.Good Luck! </p>
+    </div>
+    
+    <div class="quotehead " >
+        <div class="quote-display" id="quotedisplay"> </div>
+        <textarea class="input_box" rows="8" cols="80" placeholder="Start typing Here" id="quoteInputElement" onpaste="return false" oncopy="return false" ondrag="return false" ondrop="return false"
+            style="text-align: center;  font-family: 'Sofia';"></textarea>
+    </div>
+    <button class="restart" onclick="restartGame()" id="restart"
+        style="margin-left: 45%; margin-top: 20px;">Clear</button>
+    <div class="timer" style="margin-left: 45%; margin-top: 20px;">
+        <div class="head" id="timer">Time(s)</div>
+        <div class="init_time" id="timer"></div>
+    </div>
+    </div>
+
+
+
+
+</body>
+
+<script src="typingmaster.js">
+
+
+</script>
+
+</html>
